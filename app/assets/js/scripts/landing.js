@@ -232,7 +232,7 @@ const refreshServerStatus = async function(fade = false){
         const serverURL = new URL('my://' + serv.getAddress())
         const servStat = await ServerStatus.getStatus(serverURL.hostname, serverURL.port)
         if(servStat.online){
-            pLabel = 'PLAYERS'
+            pLabel = 'ONLINE'
             pVal = servStat.onlinePlayers + '/' + servStat.maxPlayers
         }
 
@@ -651,7 +651,7 @@ function dlAsync(login = true){
                 const authUser = ConfigManager.getSelectedAccount()
                 loggerLaunchSuite.log(`Sending selected account (${authUser.displayName}) to ProcessBuilder.`)
                 let pb = new ProcessBuilder(serv, versionData, forgeData, authUser, remote.app.getVersion())
-                setLaunchDetails('Launching game..')
+                setLaunchDetails('Uruchamianie gry..')
 
                 // const SERVER_JOINED_REGEX = /\[.+\]: \[CHAT\] [a-zA-Z0-9_]{1,16} joined the game/
                 const SERVER_JOINED_REGEX = new RegExp(`\\[.+\\]: \\[CHAT\\] ${authUser.displayName} joined the game`)
@@ -659,7 +659,7 @@ function dlAsync(login = true){
                 const onLoadComplete = () => {
                     toggleLaunchArea(false)
                     if(hasRPC){
-                        DiscordWrapper.updateDetails('Loading game..')
+                        DiscordWrapper.updateDetails('Ladowanie Gry..')
                     }
                     proc.stdout.on('data', gameStateChange)
                     proc.stdout.removeListener('data', tempListener)
@@ -686,9 +686,9 @@ function dlAsync(login = true){
                 const gameStateChange = function(data){
                     data = data.trim()
                     if(SERVER_JOINED_REGEX.test(data)){
-                        DiscordWrapper.updateDetails('Exploring the Realm!')
+                        DiscordWrapper.updateDetails('Eksploracja królestwa!')
                     } else if(GAME_JOINED_REGEX.test(data)){
-                        DiscordWrapper.updateDetails('Sailing to Westeros!')
+                        DiscordWrapper.updateDetails('Żeglując na Heaven!')
                     }
                 }
 
@@ -708,7 +708,7 @@ function dlAsync(login = true){
                     proc.stdout.on('data', tempListener)
                     proc.stderr.on('data', gameErrorListener)
 
-                    setLaunchDetails('Done. Enjoy the server!')
+                    setLaunchDetails('Gotowe. Milej Zabawy!!')
 
                     // Init Discord Hook
                     const distro = DistroManager.getDistribution()
@@ -740,7 +740,7 @@ function dlAsync(login = true){
     // Begin Validations
 
     // Validate Forge files.
-    setLaunchDetails('Loading server information..')
+    setLaunchDetails('Ładowanie informacji o serwerze..')
 
     refreshDistributionIndex(true, (data) => {
         onDistroRefresh(data)
@@ -867,7 +867,7 @@ let newsLoadingListener = null
  */
 function setNewsLoading(val){
     if(val){
-        const nLStr = 'Checking for News'
+        const nLStr = 'Sprawdzanie wiadomości'
         let dotStr = '..'
         nELoadSpan.innerHTML = nLStr + dotStr
         newsLoadingListener = setInterval(() => {

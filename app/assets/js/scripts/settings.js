@@ -341,7 +341,7 @@ function bindAuthAccountSelect(){
                 }
             }
             val.setAttribute('selected', '')
-            val.innerHTML = 'Selected Account &#10004;'
+            val.innerHTML = 'Wybrane konto &#10004;'
             setSelectedAccount(val.closest('.settingsAuthAccount').getAttribute('uuid'))
         }
     })
@@ -359,10 +359,10 @@ function bindAuthAccountLogOut(){
             if(Object.keys(ConfigManager.getAuthAccounts()).length === 1){
                 isLastAccount = true
                 setOverlayContent(
-                    'Warning<br>This is Your Last Account',
-                    'In order to use the launcher you must be logged into at least one account. You will need to login again after.<br><br>Are you sure you want to log out?',
-                    'I\'m Sure',
-                    'Cancel'
+                    'Ostrzeżenie <br> to jest Twoje ostatnie konto',
+                    'Aby korzystać z Clienta, musisz być zalogowany na co najmniej jedno konto. Będziesz musiał zalogować się ponownie po. <br> <br> Czy na pewno chcesz się wylogować?',
+                    'Jestem Pewny',
+                    'Anuluj'
                 )
                 setOverlayHandler(() => {
                     processLogOut(val, isLastAccount)
@@ -415,7 +415,7 @@ function refreshAuthAccountSelected(uuid){
         const selBtn = val.getElementsByClassName('settingsAuthAccountSelect')[0]
         if(uuid === val.getAttribute('uuid')){
             selBtn.setAttribute('selected', '')
-            selBtn.innerHTML = 'Selected Account &#10004;'
+            selBtn.innerHTML = 'Wybrane konto &#10004;'
         } else {
             if(selBtn.hasAttribute('selected')){
                 selBtn.removeAttribute('selected')
@@ -449,7 +449,7 @@ function populateAuthAccounts(){
             <div class="settingsAuthAccountRight">
                 <div class="settingsAuthAccountDetails">
                     <div class="settingsAuthAccountDetailPane">
-                        <div class="settingsAuthAccountDetailTitle">Username</div>
+                        <div class="settingsAuthAccountDetailTitle">Nazwa uzytkownika</div>
                         <div class="settingsAuthAccountDetailValue">${acc.displayName}</div>
                     </div>
                     <div class="settingsAuthAccountDetailPane">
@@ -458,9 +458,9 @@ function populateAuthAccounts(){
                     </div>
                 </div>
                 <div class="settingsAuthAccountActions">
-                    <button class="settingsAuthAccountSelect" ${selectedUUID === acc.uuid ? 'selected>Selected Account &#10004;' : '>Select Account'}</button>
+                    <button class="settingsAuthAccountSelect" ${selectedUUID === acc.uuid ? 'selected>Wybrane konto &#10004;' : '>Select Account'}</button>
                     <div class="settingsAuthAccountWrapper">
-                        <button class="settingsAuthAccountLogOut">Log Out</button>
+                        <button class="settingsAuthAccountLogOut">Wyloguj Sie</button>
                     </div>
                 </div>
             </div>
@@ -1197,11 +1197,11 @@ function isPrerelease(version){
 function populateVersionInformation(version, valueElement, titleElement, checkElement){
     valueElement.innerHTML = version
     if(isPrerelease(version)){
-        titleElement.innerHTML = 'Pre-release'
+        titleElement.innerHTML = 'Wersja wstępna'
         titleElement.style.color = '#ff886d'
         checkElement.style.background = '#ff886d'
     } else {
-        titleElement.innerHTML = 'Stable Release'
+        titleElement.innerHTML = 'Aktualna Wersja'
         titleElement.style.color = null
         checkElement.style.background = null
     }
@@ -1302,13 +1302,13 @@ function populateSettingsUpdateInformation(data){
             settingsUpdateButtonStatus('Downloading..', true)
         }
     } else {
-        settingsUpdateTitle.innerHTML = 'You Are Running the Latest Version'
+        settingsUpdateTitle.innerHTML = 'Korzystasz z najnowszej wersji'
         settingsUpdateChangelogCont.style.display = 'none'
         populateVersionInformation(remote.app.getVersion(), settingsUpdateVersionValue, settingsUpdateVersionTitle, settingsUpdateVersionCheck)
-        settingsUpdateButtonStatus('Check for Updates', false, () => {
+        settingsUpdateButtonStatus('Sprawdź aktualizacje', false, () => {
             if(!isDev){
                 ipcRenderer.send('autoUpdateAction', 'checkForUpdate')
-                settingsUpdateButtonStatus('Checking for Updates..', true)
+                settingsUpdateButtonStatus('Sprawdzanie aktualizacji..', true)
             }
         })
     }

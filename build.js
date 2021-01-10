@@ -18,10 +18,10 @@ function getCurrentPlatform(){
 builder.build({
     targets: (process.argv[2] != null && Platform[process.argv[2]] != null ? Platform[process.argv[2]] : getCurrentPlatform()).createTarget(),
     config: {
-        appId: 'helioslauncher',
-        productName: 'Helios Launcher',
+        appId: 'heavenclient',
+        productName: 'Heaven Client',
         artifactName: '${productName}-setup-${version}.${ext}',
-        copyright: 'Copyright © 2018-2020 Daniel Scalzi',
+        copyright: 'Copyright © 2020-2021 kamil214',
         directories: {
             buildResources: 'build',
             output: 'dist'
@@ -46,10 +46,10 @@ builder.build({
         },
         linux: {
             target: 'AppImage',
-            maintainer: 'Daniel Scalzi',
-            vendor: 'Daniel Scalzi',
-            synopsis: 'Modded Minecraft Launcher',
-            description: 'Custom launcher which allows users to join modded servers. All mods, configurations, and updates are handled automatically.',
+            maintainer: 'Daniel Scalzi & kamil214',
+            vendor: 'Daniel Scalzi & kamil214',
+            synopsis: 'Minecraft Launcher',
+            description: 'Nowoczesny Client uruchamiający, który umożliwia użytkownikom dołączanie do zmodyfikowanych serwerów. Wszystkie mody, konfiguracje i aktualizacje są obsługiwane automatycznie.',
             category: 'Game'
         },
         compression: 'maximum',

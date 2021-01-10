@@ -1,8 +1,8 @@
 {
     "version": "1.0.0",
     "discord": {
-        "clientId": "385581240906022916",
-        "smallImageText": "WesterosCraft",
+        "clientId": "704820022744449035",
+        "smallImageText": "Heaven",
         "smallImageKey": "seal-circle"
     },
     "java": {
@@ -11,16 +11,16 @@
     "rss": "https://forum.westeroscraft.com/forum/news.2/index.rss",
     "servers": [
         {
-            "id": "WesterosCraft-1.11.2",
-            "name": "WesterosCraft Production Server",
-            "description": "Main WesterosCraft server. Connect to enter the Realm.",
+            "id": "Heaven PvP",
+            "name": "Heaven PvP | Officialny serwer",
+            "description": "Główny serwer Heaven Client. Połącz się, aby wejść do Nieba.",
             "icon": "http://mc.westeroscraft.com/WesterosCraftLauncher/files/server-prod.png",
-            "version": "3.9.4",
-            "address": "mc.westeroscraft.com",
+            "version": "1.0.0",
+            "address": "mc.heaven-client.eu",
             "minecraftVersion": "1.11.2",
             "discord": {
-                "shortId": "Production",
-                "largeImageText": "WesterosCraft Production Server",
+                "shortId": "Heaven",
+                "largeImageText": "Heaven PvP | Officialny serwer",
                 "largeImageKey": "server-prod"
             },
             "mainServer": true,
@@ -425,16 +425,16 @@
             ]
         },
         {
-            "id": "WesterosCraftTest-1.11.2",
-            "name": "WesterosCraft Test Server",
-            "description": "Main testing server. Experimental changes are live here.",
+            "id": "Heaven | Testowy",
+            "name": "Heaven | Testowy",
+            "description": "Główny serwer testowy. Tutaj są zmiany eksperymentalne.",
             "icon": "http://mc.westeroscraft.com/WesterosCraftLauncher/files/server-test.png",
-            "version": "3.9.4",
-            "address": "mc.westeroscraft.com:4444",
+            "version": "1.2.8",
+            "address": "tmc.heaven-client.eu",
             "minecraftVersion": "1.11.2",
             "discord": {
                 "shortId": "Test Server",
-                "largeImageText": "WesterosCraft Test Server",
+                "largeImageText": "Heaven Test",
                 "largeImageKey": "server-test"
             },
             "mainServer": false,
@@ -839,16 +839,16 @@
             ]
         },
         {
-            "id": "WesterosCraftTest-1.12.2",
-            "name": "WesterosCraft 1.12.2 Test Server",
-            "description": "Tests for our version change to 1.12.2 are live here.",
+            "id": "Heaven Test",
+            "name": "Heaven | Testowy",
+            "description": "Tworzymy nowe niebo na zywo.",
             "icon": "http://mc.westeroscraft.com/WesterosCraftLauncher/files/server-test.png",
             "version": "4.2.1",
-            "address": "mc.westeroscraft.com:4445",
+            "address": "tmc.heaven-client.eu",
             "minecraftVersion": "1.12.2",
             "discord": {
-                "shortId": "1.12.2 Test Server",
-                "largeImageText": "WesterosCraft 1.12.2 Test Server",
+                "shortId": "1.12.2 Heaven Test",
+                "largeImageText": "Heaven Test",
                 "largeImageKey": "server-test"
             },
             "mainServer": false,
@@ -1270,16 +1270,16 @@
             ]
         },
         {
-            "id": "WesterosCraftTest-1.13.2",
-            "name": "WesterosCraft 1.13.2 Test Server",
-            "description": "Tests for our version change to 1.13.2 are live here.",
+            "id": "heaven 1.13",
+            "name": "Heaven 1.13",
+            "description": "testujemy dla was wersje 1.13.",
             "icon": "http://mc.westeroscraft.com/WesterosCraftLauncher/files/server-test.png",
             "version": "5.0.0",
-            "address": "mc.westeroscraft.com:4445",
+            "address": "mc.heaven-client.com",
             "minecraftVersion": "1.13.2",
             "discord": {
-                "shortId": "1.13.2 Test Server",
-                "largeImageText": "WesterosCraft 1.13.2 Test Server",
+                "shortId": "Heaven 1.13",
+                "largeImageText": "Heaven 1.13.2 Test Server",
                 "largeImageKey": "server-test"
             },
             "mainServer": false,

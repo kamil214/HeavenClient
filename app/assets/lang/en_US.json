@@ -38,7 +38,7 @@
             "login": "ZALOGUJ SIE",
             "loggingIn": "LOGOWANIE",
             "success": "ZALOGOWANY",
-            "tryAgain": "Błąd podczas logowania"
+            "tryAgain": "Spróbuj ponownie."
         },
         "landing": {
             "launch": {

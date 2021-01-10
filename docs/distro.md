@@ -8,24 +8,24 @@ The distribution index is written in JSON. The general format of the index is as
 {
     "version": "1.0.0",
     "discord": {
-        "clientId": "12334567890123456789",
-        "smallImageText": "WesterosCraft",
-        "smallImageKey": "seal-circle"
+        "clientId": "704820022744449035",
+        "smallImageText": "Heaven",
+        "smallImageKey": "Zaczynamy zabawe"
     },
     "rss": "https://westeroscraft.com/articles/index.rss",
     "servers": [
         {
-            "id": "Example_Server",
-            "name": "WesterosCraft Example Client",
-            "description": "Example WesterosCraft server. Connect for fun!",
+            "id": "Heaven PvP",
+            "name": "Heaven PvP | Officjalny Serwer",
+            "description": "Tutaj zaczyna sie dorga do nieba!",
             "icon": "http://mc.westeroscraft.com/WesterosCraftLauncher/files/example_icon.png",
             "version": "0.0.1",
-            "address": "mc.westeroscraft.com:1337",
+            "address": "mc.heaven-client.pl",
             "minecraftVersion": "1.11.2",
             "discord": {
-                "shortId": "Example",
-                "largeImageText": "WesterosCraft Example Server",
-                "largeImageKey": "server-example"
+                "shortId": "Heaven",
+                "largeImageText": "Heaven",
+                "largeImageKey": "Officjalny"
             },
             "mainServer": true,
             "autoconnect": true,
@@ -44,9 +44,9 @@ The distribution index is written in JSON. The general format of the index is as
 {
     "version": "1.0.0",
     "discord": {
-        "clientId": "12334567890123456789",
-        "smallImageText": "WesterosCraft",
-        "smallImageKey": "seal-circle"
+        "clientId": "704820022744449035",
+        "smallImageText": "Heaven",
+        "smallImageKey": "Zaczynamy zabawe"
     },
     "rss": "https://westeroscraft.com/articles/index.rss",
     "servers": []
